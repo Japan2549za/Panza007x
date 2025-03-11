@@ -1,0 +1,81 @@
+/* นำเข้า Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+  background-color: #ffe6f2;
+  font-family: 'Sriracha', cursive;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+/* เพิ่มลวดลายดอกไม้ */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/flowers.png');
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.container {
+  max-width: 500px;
+  background: rgba(255, 182, 193, 0.3);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffb6c1;
+  position: relative;
+}
+
+h2 {
+  color: #ff1493;
+  margin-bottom: 20px;
+  font-size: 26px;
+  position: relative;
+}
+
+/* เพิ่มหัวใจรอบๆ ข้อความ */
+h2::before, h2::after {
+  content: "💖";
+  font-size: 22px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+button {
+  background-color: #ff69b4;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+}
+
+button:hover {
+  background-color: #ff1493;
+  transform: scale(1.1);
+}
+
+/* เพิ่มไอคอนดอกไม้รอบๆ */
+.decoration {
+  position: absolute;
+  font-size: 24px;
+}
+
+.flower1 { top: -10px; left: -10px; }
+.flower2 { top: -10px; right: -10px; }
+.flower3 { bottom: -10px; left: -10px; }
+.flower4 { bottom: -10px; right: -10px; }
